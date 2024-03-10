@@ -23,10 +23,12 @@
         <div id="cover">
           <div id="intro">
             <h1 id="intro-name">Alba Vilanova Cortezón</h1>
-            <h2 id="intro-description">Research Engineer and Web Developer</h2>
+            <h2 id="intro-description">
+              Software and web developer for Earth</span>
+            </h2>
           </div>
         </div>
-        <div id="experience" class="section">
+        <div id="experience" onclick="window.location.href='#experience'" class="section">
           <h3>Experience</h3>
           <hr />
           <div id="experience-grid">
@@ -41,7 +43,7 @@
                   </div>
                   <div class="experience-period">03.2022 – Present</div>
                   <div class="experience-company">
-                    Barcelona Supercomputing Center
+                    <a href="https://www.bsc.es/">Barcelona Supercomputing Center</a>
                   </div>
                 </div>
                 <div class="experience-description">
@@ -66,7 +68,8 @@
                     Software Developer Intern
                   </div>
                   <div class="experience-period">09.2021 – 11.2021</div>
-                  <div class="experience-company">Meteomatics AG</div>
+                  <div class="experience-company">
+                    <a href="https://www.meteomatics.com/">Meteomatics AG</a></div>
                 </div>
                 <div class="experience-description">
                   Development of meteorological products, such as the sandstorm
@@ -87,7 +90,7 @@
                   <div class="experience-position">Research Assistant</div>
                   <div class="experience-period">10.2019 – 03.2020</div>
                   <div class="experience-company">
-                    Fraunhofer Institute for Solar Energy Systems
+                    <a href="https://www.ise.fraunhofer.de/en.html">Fraunhofer Institute for Solar Energy Systems</a>
                   </div>
                 </div>
                 <div class="experience-description">
@@ -106,7 +109,7 @@
                   <div class="experience-position">Research Intern</div>
                   <div class="experience-period">09.2018 – 06.2019</div>
                   <div class="experience-company">
-                    Korea Institute of Energy Research
+                    <a href="https://www.kier.re.kr/eng/">Korea Institute of Energy Research</a>
                   </div>
                 </div>
                 <div class="experience-description">
@@ -119,13 +122,92 @@
             </div>
           </div>
         </div>
-        <div id="education" class="section">
+        <div id="education" onclick="window.location.href='#education'" class="section">
           <h3>Education</h3>
         </div>
-        <div id="projects" class="section">
+        <div id="projects" onclick="window.location.href='#projects'" class="section">
           <h3>Projects</h3>
+          <div id="dev-selection">
+            <div id="dev-web" class="dev-selection-item selected-dev">
+              Web development
+            </div>
+            <div id="dev-software" class="dev-selection-item">
+              Software development
+            </div>
+          </div>
+          <div id="projects-grid-web" class="projects-grid">
+            <div class="project-item">
+              <div class="project-name">Air quality forecast dashboard</div>
+              <div class="project-tags">
+                <ul style="grid-template-columns: auto auto auto">
+                  <li style="background-color: rgb(125, 21, 118)">Python</li>
+                  <li style="background-color: rgb(76, 147, 14)">Dash</li>
+                  <li style="background-color: rgb(16, 62, 154)">Plotly</li>
+                </ul>
+              </div>
+              <div class="project-description">
+                I have been the main developer of the
+                <a href="http://caliope-test.bsc.es/">dashboard</a> that shows
+                the air quality forecast in the Iberian Peninsula, Catalonia and
+                Barcelona since 2023 while working at Barcelona Supercomputing Center.
+              </div>
+              <div class="project-image">
+                <img
+                  class="web-project-image"
+                  src="assets/images/projects/dashboard.png"
+                />
+              </div>
+            </div>
+            <div class="project-item">
+              <div class="project-name">Personal blog</div>
+              <div class="project-tags">
+                <ul style="grid-template-columns: auto">
+                  <li style="background-color: rgb(15, 150, 154)">Wordpress</li>
+                </ul>
+              </div>
+              <div class="project-description">
+                Created back in 2019,
+                <a href="albavilanova.es">albavilanova.es</a>
+                was my first (official) site and its main goal was to encourage
+                Spanish people to study, work and travel abroad and help them in
+                the process. In 2024 it is receiving about 1000 views per month.
+              </div>
+              <div class="project-image">
+                <img
+                  class="web-project-image"
+                  src="assets/images/projects/personal-site.png"
+                />
+              </div>
+            </div>
+          </div>
+          <div id="projects-grid-software" class="projects-grid" style="display: none;">
+            <div class="project-item">
+              <div class="project-name">
+                Atmospheric datasets comparison toolbox
+              </div>
+              <div class="project-tags">
+                <ul style="grid-template-columns: auto auto auto">
+                  <li style="background-color: rgb(125, 21, 118)">Python</li>
+                  <li style="background-color: rgb(215, 146, 18)">Jupyter</li>
+                </ul>
+              </div>
+              <div class="project-description">
+                <a href="https://github.com/ECMWFCode4Earth/adc-toolbox"
+                  >Atmospheric Datasets Comparison (ADC) Toolbox</a
+                >
+                is aimed to have a set of tools that allows users to compare
+                atmospheric composition datasets from different sources.
+              </div>
+              <div class="project-image">
+                <img
+                  class="software-project-image"
+                  src="assets/images/projects/adc.png"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="contact" class="section">
+        <div id="contact" onclick="window.location.href='#contact'" class="section">
           <h3>Contact</h3>
         </div>
       </div>
@@ -133,7 +215,9 @@
         <div id="menu">
           <ul>
             <li>
-              <a href="#cover"><i class="fa-solid fa-dove"></i>Hi!</a>
+              <a href="#cover" class="active"
+                ><i class="fa-solid fa-dove"></i>Hi!</a
+              >
             </li>
             <li>
               <a href="#experience"
@@ -172,5 +256,43 @@
         item.classList.toggle("active");
       });
     });
+
+    // Change src from image to gif on hover on projects
+    // This is not done directly with CSS because I want the GIF to start always at 0s when the user sees it
+    const projectImages = document.querySelectorAll(".web-project-image");
+    projectImages.forEach((item) => {
+      var gifNamePNG = item.src.split("/").slice(-1)[0];
+      var gifNameGIF = gifNamePNG.replace("png", "gif");
+      // Put GIF when entering image
+      item.addEventListener("mouseover", () => {
+        item.src = "assets/images/projects/" + gifNameGIF;
+      });
+      // Return to image when leaving the image
+      item.addEventListener("mouseout", () => {
+        item.src = "assets/images/projects/" + gifNamePNG;
+      });
+    });
+
+    // Toggle tabs
+    const devSelectionItems = document.querySelectorAll(".dev-selection-item");
+    devSelectionItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        const webGrid = document.getElementById("projects-grid-web");
+        const webGridTitle = document.getElementById("dev-web");
+        const softwareGrid = document.getElementById("projects-grid-software");
+        const softwareGridTitle = document.getElementById("dev-software");
+        if (item.id === "dev-software") {
+          webGrid.style.display = "none";
+          webGridTitle.classList.remove("selected-dev");
+          softwareGrid.style.display = "block";
+          softwareGridTitle.classList.add("selected-dev");
+        } else if (item.id === "dev-web") {
+          webGrid.style.display = "block";
+          webGridTitle.classList.add("selected-dev");
+          softwareGrid.style.display = "none";
+          softwareGridTitle.classList.remove("selected-dev");
+        }
+      })
+    })
   </script>
 </html>

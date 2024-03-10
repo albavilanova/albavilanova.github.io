@@ -1,298 +1,396 @@
 :root {
-   --bg-gray: #ececec;
-   --border-gray: #e0e0e0;
-   --gray: #444444;
-   --red: #c40000;
-}
-
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
-body {
-    font-family: "Alegreya Sans";
-}
-
-a {
-    color: var(--gray);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--red);
-}
-
-#cover {
-    background-image: url("assets/images/cover.jpg");
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: grid;
-    align-items: center;
-    color: white;  
-    justify-content:end;
-}
-
-#intro {
-    padding: 10em;
-}
-
-#intro-name {
-    font-size: 60px;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-#intro-description {
-    font-size: 42px;
-    font-weight: 400;
-}
-
-#all {
-    display: grid;
-    grid-template-columns: auto 17%;
-    width: 100%;
-}
-
-#sidenav {
-    width: 17%;
-    position: fixed;
-    top: 0;
-    right: 0;
-}
-
-#menu {
-    display: grid;
-    align-items: center;
-    background-color:white;
-    font-size: 24px;
-    height: 100vh;
-    box-shadow: -4px 0 8px -4px gray;
-}
-
-
-footer {
-    font-size: 22px;
-    background-color: var(--gray);
-    color: white;
-    padding: 20px;
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-}
-
-#menu ul {
-    list-style: none;
-    margin: 0 !important;
-    vertical-align: center;
-}
-
-#menu li {
-    padding: 30px 0px;
-}
-
-#menu i {
-    margin-right: 5px;
-}
-
-.active {
-    color: var(--red);
-}
-
-.section {
-    padding: 5em 15em;
-}
-
-.section h3 {
-    font-size: 30px;
-    text-align: center;
-}
-
-#experience, #projects {
-    background-color: var(--bg-gray);
-}
-
-#education, #contact {
-    background-color: white;
-}
-
-#experience-grid {
-    display: grid;
-    grid-template-columns: auto;
-    gap: 2em;
-}
-
-.experience-item {
-    display: grid;
-    justify-content: start;
-    align-items: center;
-    grid-template-columns: auto auto;
-    border-radius: 5px;
-    gap: 2em;
-    height: 15em;
-}
-
-.experience-info {
-    padding: 1em;
-    background-color: white;
-    border: 2px solid var(--border-gray);
-}
-
-.experience-position {
-    font-size: 25px;
-    font-weight: 500;
-}
-
-.experience-period, .experience-company {
-    font-size: 22px;
-}
-
-.experience-period {
-    text-align: right;
-}
-
-.experience-company {
-    margin-bottom: 0.5em;
-}
-
-.experience-description {
-    font-size: 20px;
-    color: #676767;
-}
-
-.experience-img {
-    width: 9em;
-    position:relative;
-    border-radius: 50%;
-}
-
-.experience-map {
-    height: 9em;
-    background-color: var(--bg-gray);
-    display: inline-block;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-#barcelona-map {
-    background-image: url("assets/images/maps/Barcelona.jpg");
-}
-
-#sankt-gallen-map {
-    background-image: url("assets/images/maps/Sankt-Gallen.jpg");
-}
-
-#daejeon-map {
-    background-image: url("assets/images/maps/Daejeon.jpg");
-}
-
-#freiburg-map {
-    background-image: url("assets/images/maps/Freiburg.png");
-}
-
-.experience-details {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-}
-
-.experience-location {
-    visibility: hidden;
-    width: 9em;
-    border-radius: 50%;
-    height: 9em;
-}
-
-.experience-map:hover .experience-location {
-    visibility: visible;
-    display: grid;
-    align-items: center;
-    background: rgba(0,0,0,.5);
-    color: white;
-    text-align: center;
-    z-index: 2;
-}
-
-hr {
-    height: 60em;
-    width: 0px;
-    border: 1px solid var(--red);
-    position: absolute;
-    left: 19.5em;
-}
-
-@media (max-width: 1100px) {
-
-    #all {
-        display: grid;
-        grid-template-columns: auto;
-        width: 100%;
-    }
-
-    #sidenav {
-        display: none;
-    }
-
-    #experience-grid {
-        grid-template-columns: auto;
-    }
-}
-
-@media (max-width: 1600px) {
-    .section {
-        padding: 5em 5em;
-    }
-
-    hr {
-        left: 9.5em;
-    }
-}
-
-@media (max-width: 1000px) {
-    .experience-map {
-        display: none;
-    }
-
-    hr {
-        display: none;
-    }
-
-    .experience-item  {
-        height: auto;
-        gap: 0;
-    }
-
-    .section {
-        padding: 2em 2em;
-    }
-
-    #intro {
-        padding: 2em;
-        text-align: center;
-    }
-
-    #intro-name {
-        font-size: 40px;
-    }
-
-    #intro-description {
-        font-size: 32px;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .experience-details {
-        grid-template-columns: auto;
-    }
-
-    .experience-period {
-        text-align: left;
-    }
-
-}
+    --bg-gray: #ececec;
+    --border-gray: #e0e0e0;
+    --description-gray: #676767;
+    --gray: #444444;
+    --red: #c40000;
+ }
+ 
+ body, html {
+     height: 100%;
+     margin: 0;
+ }
+ 
+ body {
+     font-family: "Alegreya Sans";
+ }
+ 
+ a {
+     color: var(--gray);
+     text-decoration: none;
+ }
+ 
+ #content a {
+     color: var(--red);
+ }
+ 
+ a:hover {
+     color: var(--red);
+ }
+ 
+ #cover {
+     background-image: url("assets/images/cover.jpg");
+     height: 100vh;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     display: grid;
+     align-items: center;
+     color: white;  
+     justify-content:end;
+ }
+ 
+ #intro {
+     padding: 10em;
+ }
+ 
+ #intro-name {
+     font-size: 64px;
+     font-weight: 500;
+     margin: 0 !important;
+ }
+ 
+ #intro-description {
+     font-size: 39px;
+     font-weight: 400;
+     background-color: var(--red);
+     padding: 0.2em;
+     margin: 0.5em 0 !important;
+ }
+ 
+ #all {
+     display: grid;
+     grid-template-columns: auto 17%;
+     width: 100%;
+ }
+ 
+ #sidenav {
+     width: 17%;
+     position: fixed;
+     top: 0;
+     right: 0;
+ }
+ 
+ #menu {
+     display: grid;
+     align-items: center;
+     background-color:white;
+     font-size: 24px;
+     height: 100vh;
+     box-shadow: -4px 0 8px -4px gray;
+ }
+ 
+ 
+ footer {
+     font-size: 22px;
+     background-color: var(--gray);
+     color: white;
+     padding: 20px;
+     bottom: 0;
+     position: absolute;
+     width: 100%;
+ }
+ 
+ #menu ul {
+     list-style: none;
+     margin: 0 !important;
+     vertical-align: center;
+ }
+ 
+ #menu li {
+     padding: 30px 0px;
+ }
+ 
+ #menu i {
+     margin-right: 5px;
+ }
+ 
+ .active {
+     color: var(--red);
+ }
+ 
+ .section {
+     padding: 5em 13em;
+ }
+ 
+ .section h3 {
+     font-size: 30px;
+     text-align: center;
+ }
+ 
+ #experience, #projects {
+     background-color: var(--bg-gray);
+ }
+ 
+ #education, #contact {
+     background-color: white;
+ }
+ 
+ #experience-grid {
+     display: grid;
+     grid-template-columns: auto;
+     gap: 2em;
+ }
+ 
+ .experience-item {
+     display: grid;
+     justify-content: start;
+     align-items: center;
+     grid-template-columns: auto auto;
+     border-radius: 5px;
+     gap: 2em;
+     height: 15em;
+ }
+ 
+ .experience-info {
+     padding: 1em;
+     background-color: white;
+     border: 2px solid var(--border-gray);
+ }
+ 
+ .experience-position {
+     font-size: 25px;
+     font-weight: 500;
+ }
+ 
+ .experience-period, .experience-company {
+     font-size: 22px;
+ }
+ 
+ .experience-period {
+     text-align: right;
+ }
+ 
+ .experience-company {
+     margin-bottom: 0.5em;
+ }
+ 
+ .experience-description {
+     font-size: 20px;
+     color: var(--description-gray);
+ }
+ 
+ .experience-img {
+     width: 9em;
+     position:relative;
+     border-radius: 50%;
+ }
+ 
+ .experience-map {
+     height: 9em;
+     background-color: var(--bg-gray);
+     display: inline-block;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     border-radius: 50%;
+     z-index: 1;
+ }
+ 
+ #barcelona-map {
+     background-image: url("assets/images/maps/Barcelona.jpg");
+ }
+ 
+ #sankt-gallen-map {
+     background-image: url("assets/images/maps/Sankt-Gallen.jpg");
+ }
+ 
+ #daejeon-map {
+     background-image: url("assets/images/maps/Daejeon.jpg");
+ }
+ 
+ #freiburg-map {
+     background-image: url("assets/images/maps/Freiburg.png");
+ }
+ 
+ .experience-details {
+     display: grid;
+     grid-template-columns: auto auto;
+     justify-content: space-between;
+ }
+ 
+ .experience-location {
+     visibility: hidden;
+     width: 9em;
+     border-radius: 50%;
+     height: 9em;
+ }
+ 
+ .experience-map:hover .experience-location {
+     visibility: visible;
+     display: grid;
+     align-items: center;
+     background: rgba(0,0,0,.5);
+     color: white;
+     text-align: center;
+     z-index: 2;
+ }
+ 
+ hr {
+     height: 60em;
+     width: 0px;
+     border: 1px solid var(--red);
+     position: absolute;
+     left: 17.5em;
+ }
+ 
+ #dev-selection {
+     list-style: none;
+     margin: 0 !important;
+     padding: 0 !important;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     align-items: center;
+     justify-content: space-evenly;
+     border: 2px solid var(--border-gray);
+     border-radius: 5px;
+     font-size: 24px;
+ }
+ 
+ .dev-selection-item {
+     display: grid;
+     align-items: center;
+     text-align: center;
+     padding: 0.3em 0;
+     cursor: pointer;
+     background-color: white;
+     color: black;
+     height: 100%;
+ }
+ 
+ .selected-dev {
+     color: white;
+     background-color: var(--red);
+     font-weight: 500;
+ }
+ 
+ .project-item {
+     text-align: center;
+     border: 2px solid var(--border-gray);
+     background-color: white;
+     margin: 2em 0;
+ }
+ 
+ .project-name {
+     font-size: 25px;
+     font-weight: 500;
+     margin-top: 1em;
+     padding: 0.5em;
+ }
+ 
+ .project-description {
+     font-size: 20px;
+     padding: 1em 8em;
+     text-align: center;
+     color: var(--description-gray);
+ }
+ 
+ .project-tags ul {
+     list-style: none;
+     margin: 0 !important;
+     padding: 0 !important;
+     display: grid;
+     gap: 1em;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .project-tags li {
+     width: fit-content;
+     padding: 0.5em;
+     border-radius: 5px;
+     color: white;
+ }
+ 
+ .project-image {
+     margin: 0 !important;
+ }
+ 
+ .web-project-image {
+     cursor: wait;
+ }
+ 
+ .web-project-image, .software-project-image {
+     width: 100%;
+ }
+ 
+ 
+ 
+ @media (max-width: 1100px) {
+ 
+     #all {
+         display: grid;
+         grid-template-columns: auto;
+         width: 100%;
+     }
+ 
+     #sidenav {
+         display: none;
+     }
+ 
+     #experience-grid {
+         grid-template-columns: auto;
+     }
+ }
+ 
+ @media (max-width: 1600px) {
+     .section {
+         padding: 5em 5em;
+     }
+ 
+     hr {
+         left: 9.5em;
+     }
+ }
+ 
+ @media (max-width: 1000px) {
+     .experience-map {
+         display: none;
+     }
+ 
+     hr {
+         display: none;
+     }
+ 
+     .experience-item  {
+         height: auto;
+         gap: 0;
+     }
+ 
+     .section {
+         padding: 2em 2em;
+     }
+ 
+     #intro {
+         padding: 2em;
+         text-align: center;
+     }
+ 
+     #intro-name {
+         font-size: 40px;
+     }
+ 
+     #intro-description {
+         font-size: 28px;
+     }
+ 
+     .project-description {
+         padding: 1em 2em;
+     }
+ }
+ 
+ @media (max-width: 768px) {
+ 
+     .experience-details {
+         grid-template-columns: auto;
+     }
+ 
+     .experience-period {
+         text-align: left;
+     }
+ 
+     #dev-selection {
+         font-size: 20px;
+     }
+ 
+ }
