@@ -31,6 +31,12 @@
  #content a {
     color: var(--red);
  }
+
+ #content a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+ }
  
  a:hover {
     color: var(--red);
@@ -91,14 +97,32 @@
  
  footer {
     font-size: 22px;
-    background-color: var(--gray);
+    background-color: var(--red);
     color: white;
     padding: 20px;
-    bottom: 0;
-    position: absolute;
-    width: 100%;
+    text-align: center;
+    padding: 3em 0;
+    display: grid;
+    align-items: center;
  }
  
+ #footer-media {
+    display: inline-block;
+    padding-bottom: 0.5em;
+ }
+
+ #footer-media i {
+    padding: 0.5em;
+ }
+
+ #footer-media a {
+    color: white;
+ }
+
+ #footer-media a:hover {
+    color: var(--gray);
+ }
+
  #menu ul {
     list-style: none;
     margin: 0 !important;
@@ -491,6 +515,7 @@
  
  .web-project-image, .software-project-image {
     width: 100%;
+    display: block;
  }
 
  @media (max-width: 1600px) {
