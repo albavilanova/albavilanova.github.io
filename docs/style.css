@@ -68,12 +68,12 @@
  
  #all {
     display: grid;
-    grid-template-columns: auto 17%;
+    grid-template-columns: 80% 20%;
     width: 100%;
  }
  
  #sidenav {
-    width: 17%;
+    width: 20%;
     position: fixed;
     top: 0;
     right: 0;
@@ -308,14 +308,12 @@
  #language-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 1em;  
+    gap: 0.5em;  
     margin: 1em;
-    justify-content: center;
-    width: 100%;
  }
 
  .language-item {
-    font-size: 20px;
+    font-size: 18px;
     padding: 2em;
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
     background-color: var(--bg-gray);
@@ -495,7 +493,23 @@
     width: 100%;
  }
 
- @media (max-width: 1100px) {
+ @media (max-width: 1600px) {
+    .section {
+        padding: 5em 5em;
+    }
+
+    hr {
+        left: 9.5em;
+    }
+ }
+
+ @media (max-width: 1400px) {
+    #language-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+ }
+
+ @media (max-width: 1200px) {
     #all {
         display: grid;
         grid-template-columns: auto;
@@ -504,20 +518,18 @@
 
     #sidenav {
         display: none;
-    }
+     }
 
     #experience-grid {
         grid-template-columns: auto;
     }
- }
- 
- @media (max-width: 1600px) {
-    .section {
-        padding: 5em 5em;
+
+    #language-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 
-    hr {
-        left: 9.5em;
+    #education-grid {
+        grid-template-columns: auto;
     }
  }
  
@@ -580,10 +592,6 @@
     }
 
     .education-details {
-        grid-template-columns: auto;
-    }
-
-    #education-grid {
         grid-template-columns: auto;
     }
  }
