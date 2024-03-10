@@ -28,8 +28,8 @@
             </h2>
           </div>
         </div>
-        <div id="experience" onclick="window.location.href='#experience'" class="section">
-          <h3>Experience</h3>
+        <div id="experience" class="section">
+          <h3 onclick="window.location.href='#experience'">Experience</h3>
           <hr />
           <div id="experience-grid">
             <div class="experience-item">
@@ -122,27 +122,120 @@
             </div>
           </div>
         </div>
-        <div id="education" onclick="window.location.href='#education'" class="section">
-          <h3>Education</h3>
+        <div id="education" class="section">
+          <h3 onclick="window.location.href='#education'">Education</h3>
+          <h4><i class="fa-solid fa-file"></i> Degrees</h4>
+          <div id="education-grid">
+          <div class="education-item">
+            <img
+                class="logo"
+                src="assets/images/logos/upc.png"
+                alt="UPC logo"
+              />
+            <div class="education-name">Postgraduate Course in Full-Stack Web Technologies</div>
+            <div class="education-period">02.2024 – Present</div>
+            <div class="education-uni">
+              <a href="https://www.upc.edu/">Technical University of Catalonia</a>
+            </div>
+          </div>
+          <div class="education-item">
+            <div id="master-grid">
+            <img
+                class="logo"
+                src="assets/images/logos/nova.png"
+                alt="UPC logo"
+              />
+              <img
+                class="logo"
+                id="wwu-logo"
+                src="assets/images/logos/wwu.png"
+                alt="NOVA logo"
+              />
+              <img
+                class="logo"
+                src="assets/images/logos/uji.png"
+                alt="UJI logo"
+              />
+            </div>
+            <div class="education-name">Master’s Degree in Geospatial Technologies</div>
+            <div class="education-period">09.2020 – 03.2022</div>
+            <div class="education-uni">
+              <a href="https://www.unl.pt/">NOVA</a>, 
+              <a href="https://www.uni-muenster.de/">WWU Münster</a> and 
+              <a href="https://www.uji.es/">Jaume I University</a>
+            </div>
+          </div>
+          <div class="education-item">
+            <img
+                class="logo"
+                src="assets/images/logos/inha.png"
+                alt="Inha University logo"
+              />
+            <div class="education-name">International Exchange</div>
+            <div class="education-period">08.2017 – 12.2017</div>
+            <div class="education-uni">
+              <a href="https://www.inha.ac.kr/kr/index.do">Inha University</a>
+            </div>
+          </div>
+          <div class="education-item">
+            <img
+                class="logo"
+                src="assets/images/logos/udl.png"
+                alt="UDL logo"
+              />
+            <div class="education-name">Bachelor’s Degree in Mechanical Engineering</div>
+            <div class="education-period">09.2014 – 02.2020</div>
+            <div class="education-uni">
+              <a href="https://www.udl.cat/">University of Lleida</a>
+            </div>
+          </div>
         </div>
-        <div id="projects" onclick="window.location.href='#projects'" class="section">
-          <h3>Projects</h3>
+        <h4><i class="fa-solid fa-users-gear"></i> Associations</h4>
+        <div id="associations-grid">
+          <ul>
+            <li>
+              Web development team leader, principal organizer and host (2021), 
+              <a href="https://geomundus.org/">GeoMundusConference</a>
+            </li>
+            <li>
+              President (2018) and exchange coordinator (2017), 
+              <a href="https://dissenyweb.gddtec.udl.cat/">IAESTE LC Lleida</a>
+            </li>
+            <li>
+              Linguistic volunteer (2017), 
+              <a href="https://www.udl.cat/ca/serveis/il/">Linguistic Service</a>
+            </li>
+          </ul>
+        </div>
+        <h4><i class="fa-solid fa-language"></i> Languages</h4>
+        <div id="language-grid">
+          <div class="language-item spanish"><span>Me gusta desarrollar webs bonitas</span></div>
+          <div class="language-item catalan"><span>M'agrada desenvolupar webs boniques</span></div>
+          <div class="language-item english"><span>I like to develop beautiful websites</span></div>
+          <div class="language-item german"><span>Es macht mir Spaß, schöne Websites zu entwickeln</span></div>
+          <div class="language-item tagalog"><span>Gusto kong bumuo ng magagandang website</span></div>
+        </div>
+        </div>
+        <div id="projects" class="section">
+          <h3 onclick="window.location.href='#projects'">Projects</h3>
           <div id="dev-selection">
             <div id="dev-web" class="dev-selection-item selected-dev">
-              Web development
+              <h4>Web development</h4>
             </div>
             <div id="dev-software" class="dev-selection-item">
-              Software development
+              <h4>Software development</h4>
             </div>
           </div>
           <div id="projects-grid-web" class="projects-grid">
             <div class="project-item">
               <div class="project-name">Air quality forecast dashboard</div>
               <div class="project-tags">
-                <ul style="grid-template-columns: auto auto auto">
-                  <li style="background-color: rgb(125, 21, 118)">Python</li>
-                  <li style="background-color: rgb(76, 147, 14)">Dash</li>
-                  <li style="background-color: rgb(16, 62, 154)">Plotly</li>
+                <ul style="grid-template-columns: auto auto auto auto auto">
+                  <li class="plotly">Plotly</li>
+                  <li class="dash">Dash</li>
+                  <li class="python">Python</li>
+                  <li class="javascript">JavaScript</li>
+                  <li class="css">CSS</li>
                 </ul>
               </div>
               <div class="project-description">
@@ -155,14 +248,42 @@
                 <img
                   class="web-project-image"
                   src="assets/images/projects/dashboard.png"
+                  alt="CALIOPE dashboard"
+                />
+              </div>
+            </div>
+            <div class="project-item">
+              <div class="project-name">GeoMundus Conference</div>
+              <div class="project-tags">
+                <ul style="grid-template-columns: auto auto auto">
+                  <li class="javascript">JavaScript</li>
+                  <li class="html">HTML</li>
+                  <li class="css">CSS</li>
+                </ul>
+              </div>
+              <div class="project-description">
+                I lead the development of the <a href="https://geomundus.org/2021/">website 
+                  for the GeoMundus Conference in 2021</a>. 
+                This conference is organized by the students of the Master's degree in Geospatial 
+                Technologies every year to share the state of the art scientific research, 
+                knowledge, and skills in the fields of Geospatial Technologies, Geoinformatics, and 
+                Geosciences.
+              </div>
+              <div class="project-image">
+                <img
+                  class="web-project-image"
+                  src="assets/images/projects/geomundus.png"
+                  alt="GeoMundus conference website"
                 />
               </div>
             </div>
             <div class="project-item">
               <div class="project-name">Personal blog</div>
               <div class="project-tags">
-                <ul style="grid-template-columns: auto">
-                  <li style="background-color: rgb(15, 150, 154)">Wordpress</li>
+                <ul style="grid-template-columns: auto auto auto">
+                  <li style="background-color: var(--wordpress)">Wordpress</li>
+                  <li class="html">HTML</li>
+                  <li class="css">CSS</li>
                 </ul>
               </div>
               <div class="project-description">
@@ -176,6 +297,7 @@
                 <img
                   class="web-project-image"
                   src="assets/images/projects/personal-site.png"
+                  alt="Personal website"
                 />
               </div>
             </div>
@@ -187,8 +309,8 @@
               </div>
               <div class="project-tags">
                 <ul style="grid-template-columns: auto auto auto">
-                  <li style="background-color: rgb(125, 21, 118)">Python</li>
-                  <li style="background-color: rgb(215, 146, 18)">Jupyter</li>
+                  <li class="python">Python</li>
+                  <li class="jupyter">Jupyter</li>
                 </ul>
               </div>
               <div class="project-description">
@@ -202,13 +324,14 @@
                 <img
                   class="software-project-image"
                   src="assets/images/projects/adc.png"
+                  alt="ADC toolbox project cover"
                 />
               </div>
             </div>
           </div>
         </div>
-        <div id="contact" onclick="window.location.href='#contact'" class="section">
-          <h3>Contact</h3>
+        <div id="contact" class="section">
+          <h3 onclick="window.location.href='#contact'">Contact</h3>
         </div>
       </div>
       <aside id="sidenav">
