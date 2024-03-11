@@ -86,13 +86,14 @@
    top: 0;
    right: 0;
    font-size: 24px;
+   height: 100%;
  }
  
  #menu {
    display: grid;
    align-items: center;
    background-color:white;
-   height: 100vh;
+   height: 100%;
    box-shadow: -4px 0 8px -4px gray;
  }
  
