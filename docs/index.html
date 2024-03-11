@@ -340,6 +340,7 @@
           &copy; 2024 Alba Vilanova Cortezón
         </footer>
       </div>
+      <div id="menu-icon" nclick="rot(this)"><i class="fa-regular fa-compass"></i></div>
       <aside id="sidenav">
         <div id="menu">
           <ul>
@@ -448,5 +449,41 @@
         $( '#cover-tab' ).addClass("active");
       }
     });
+
+    // Rotate menu icon and open sidenav when we click on it
+    var count = 0;
+    var menuButton = document.getElementById("menu-icon");
+    var sidenav = document.getElementById("sidenav");
+    menuButton.addEventListener("click", () => {
+
+      // Rotate icon
+      count++;
+      var deg=count*90;
+      menuButton.style.transform = "rotate("+deg+"deg)";
+
+      // Close sidenav if count is even
+      if (count % 2  == 0) {
+        sidenav.style.display = "none";
+
+      // Open sidenav if count is odd
+      } else {
+        sidenav.style.display = "block";
+        sidenav.style.width = "85%";
+        sidenav.style.fontSize = "28px";
+      }
+    })
+
+    // Show/hide sidenav on screen resize
+    // This is made because it does not appear when we resize it after using the menu icon
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1200) {
+        sidenav.style.display = "block";
+        sidenav.style.width = "20%";
+        sidenav.style.fontSize = "24px";
+      } else {
+        sidenav.style.display = "none";
+      }
+    })
+
   </script>
 </html>
