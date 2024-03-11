@@ -676,3 +676,15 @@
       grid-template-columns: 1fr 1fr;
    }
  }
+
+
+ @media (max-width: 480px) {
+
+  #intro-name {
+    font-size: 36px;
+  }
+
+  #intro-description {
+     font-size: 25px;
+  }
+}
