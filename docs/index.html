@@ -454,6 +454,8 @@
     var count = 0;
     var menuButton = document.getElementById("menu-icon");
     var sidenav = document.getElementById("sidenav");
+    var content = document.getElementById("content");
+    
     menuButton.addEventListener("click", () => {
 
       // Rotate icon
@@ -465,11 +467,21 @@
       if (count % 2  == 0) {
         sidenav.style.display = "none";
 
+        // Make sure scroll is active and content is clear
+        document.body.style.overflow = "scroll";
+        content.style.opacity = "1";
+        content.style.pointerEvents = "auto";
+
       // Open sidenav if count is odd
       } else {
         sidenav.style.display = "block";
         sidenav.style.width = "85%";
         sidenav.style.fontSize = "28px";
+        document.body.style.overflow = "hidden";
+
+        // Add opacity to content on the background
+        content.style.opacity = "0.5";
+        content.style.pointerEvents = "none";
       }
     })
 
@@ -483,6 +495,11 @@
       } else {
         sidenav.style.display = "none";
       }
+      
+      // Make sure scroll is active and content is clear
+      document.body.style.overflow = "scroll";
+      content.style.opacity = "1";
+      content.style.pointerEvents = "auto";
     })
 
   </script>
