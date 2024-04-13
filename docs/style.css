@@ -144,11 +144,11 @@
    color: var(--red);
  }
  
- .section {
+ section {
    padding: 5em 13em;
  }
  
- .section h3 {
+ section h3 {
    font-size: 30px;
    text-align: center;
  }
@@ -512,7 +512,7 @@
  }
  
  .web-project-image {
-   cursor: wait;
+   cursor: pointer;
  }
  
  .web-project-image, .software-project-image {
@@ -536,7 +536,7 @@
  }
 
  @media (max-width: 1600px) {
-   .section {
+   section {
       padding: 5em 5em;
    }
 
@@ -651,7 +651,7 @@
          gap: 0;
    }
 
-   .section {
+   section {
       padding: 2em 2em;
    }
 
