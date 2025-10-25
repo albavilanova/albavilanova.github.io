@@ -263,7 +263,6 @@ section h3 {
 }
 
 hr {
-  height: 60em;
   width: 0px;
   border: 1px solid var(--red);
   position: absolute;
