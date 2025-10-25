@@ -564,6 +564,14 @@
     }
   })
 
+  function adjustLineHeight() {
+    // Adjust red line height next to experience grid
+    const grid = document.getElementById('experience-grid');
+    const vline = document.querySelector('hr');
+    const height = grid.offsetHeight;
+    vline.style.height = height + 'px';
+  }
+
   // Show/hide sidenav on screen resize
   // This is made because it does not appear when we resize it after using the menu icon
   window.addEventListener("resize", () => {
@@ -579,6 +587,12 @@
     document.body.style.overflow = "scroll";
     content.style.opacity = "1";
     content.style.pointerEvents = "auto";
+
+    adjustLineHeight();
+  })
+
+  window.addEventListener("load", () => {
+    adjustLineHeight();
   })
 
 </script>
