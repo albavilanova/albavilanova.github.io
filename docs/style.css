@@ -175,7 +175,6 @@ section h3 {
   grid-template-columns: auto 1fr;
   border-radius: 5px;
   gap: 2em;
-  height: 15em;
 }
 
 .experience-info {
