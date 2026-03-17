@@ -205,6 +205,28 @@
         </div>
         <div id="projects-grid-web" class="projects-grid">
           <div class="project-item">
+            <div class="project-name">RESPIRE Dashboard</div>
+            <div class="project-tags">
+              <ul>
+                <li class="language">Python</li>
+                <li class="language">JavaScript</li>
+                <li class="language">CSS</li>
+                <li class="library">Plotly</li>
+                <li class="library">Dash</li>
+                <li class="library">Leaflet</li>
+                <li class="testing">Cypress</li>
+              </ul>
+            </div>
+            <div class="project-description">       
+              In 2025 I gave support to the development the <a href="https://respire.bsc.es/test-dashboard/" target="_blank">RESPIRE dashboard</a>, 
+              which shows the NRT emissions of carbon dioxide and methane in Spain per sector.
+            </div>
+            <div class="project-image">
+              <a href="https://respire.bsc.es/test-dashboard/" target="_blank">
+              <img class="web-project-image" src="assets/images/projects/respire-dashboard.png" alt="Respire dashboard" />
+              </a>
+            </div>
+          </div>
             <div class="project-name">EpiOutlook Dashboard</div>
             <div class="project-tags">
               <ul>
@@ -438,7 +460,9 @@
           <a href="https://www.linkedin.com/in/albavilanova/"><i class="fa-brands fa-linkedin"></i></a>
           <a href="https://github.com/albavilanova"><i class="fa-brands fa-github"></i></a>
         </div>
-        &copy; 2024 Alba Vilanova Cortezón
+        <div id="footer-copyright">
+          &copy; <span id="year"></span> Alba Vilanova Cortezón
+        </div>
       </footer>
     </div>
     <div id="menu-icon"><i class="fa-regular fa-compass"></i></div>
@@ -593,6 +617,9 @@
 
   window.addEventListener("load", () => {
     adjustLineHeight();
+    // Set current year on footer
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
   })
 
 </script>
